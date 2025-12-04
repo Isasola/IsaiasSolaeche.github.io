@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional - Julio Isaías Solaeche Florentín</title>
+    <style>
+        /* Estilos CSS Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb; /* Azul */
+            --secondary: #7c3aed; /* Púrpura */
+            --dark: #1e293b; /* Gris oscuro */
+            --light: #f8fafc; /* Blanco roto */
+            --text-color: #334155;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--light);
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--light);
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+
+        header h2 {
+            font-size: 1.2em;
+            font-weight: 300;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .tagline {
+            font-style: italic;
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section h2 {
+            color: var(--secondary);
+            font-size: 1.8em;
+            border-left: 5px solid var(--primary);
+            padding-left: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--light);
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info, .stats, .languages {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        .contact-item, .stat-item, .lang-item {
+            padding: 8px 15px;
+            border-radius: 5px;
+            background: #f1f5f9;
+            color: var(--dark);
+        }
+
+        .experience-item, .certification-item, .participation-item {
+            margin-bottom: 20px;
+        }
+
+        .experience-item h3 {
+            color: var(--primary);
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .experience-item p.role-info {
+            font-style: italic;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+
+        .experience-item ul, .certifications-list, .participation-list, .skills-list, .achievements-list {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        .certifications-list, .participation-list {
+            column-count: 2;
+            column-gap: 30px;
+        }
+
+        /* Estilos de la Galería */
+        .gallery-category h3 {
+            color: var(--dark);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .image-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-card-info {
+            padding: 15px;
+        }
+
+        .image-card-info strong {
+            display: block;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .image-card-info span {
+            font-size: 0.9em;
+            color: #64748b;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background: var(--primary);
+            color: var(--light);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .certifications-list, .participation-list {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://i.imgur.com/Kjx3Obo.jpg" alt="Foto de Perfil de Julio Isaías Solaeche Florentín" class="profile-img">
+        
+        <h1>JULIO ISAÍAS SOLAECHE FLORENTÍN</h1>
+        <h2>Gestor Internacional de Proyectos & Especialista en Cooperación</h2>
+        <p class="tagline">Más de 6 años transformando vidas a través de programas educativos y fortaleciendo lazos internacionales.</p>
+        
+        <div class="contact-info">
+            <span class="contact-item">📍 Asunción, Paraguay</span>
+            <span class="contact-item">📧 isasolaeche@gmail.com</span>
+            <span class="contact-item">📱 +595 992 954 169</span>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">500+ Personas Capacitadas</div>
+            <div class="stat-item">15+ Programas Diseñados</div>
+            <div class="stat-item">10+ Foros Internacionales</div>
+            <div class="stat-item">6+ Años de Experiencia</div>
+        </div>
+
+        <div class="languages">
+            <div class="lang-item">🌐 Español (Nativo)</div>
+            <div class="lang-item">🌐 Guaraní (Nativo)</div>
+            <div class="lang-item">🌐 Inglés (C1)</div>
+            <div class="lang-item">🌐 Portugués (C1)</div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section id="perfil" class="section">
+            <h2>Perfil Profesional</h2>
+            <p>Gestor multidisciplinario de proyectos e internacionalista con más de seis años de experiencia liderando organizaciones sin fines de lucro, diseñando programas educativos y coordinando iniciativas internacionales. Ha colaborado con el **Banco Interamericano de Desarrollo (BID)**, el **Ministerio de la Juventud de Paraguay** y diversas ONGs internacionales, desarrollando proyectos de formación, liderazgo juvenil y cooperación global. Actualmente se desempeña como **Secretario del Comité Nacional de Preparación de Paraguay para el World Youth Festival**, impulsando la participación juvenil en foros internacionales y promoviendo la diplomacia pública.</p>
+        </section>
+
+        <section id="experiencia" class="section">
+            <h2>Experiencia Profesional</h2>
+
+            <div class="experience-item">
+                <h3>Secretario – Comité Nacional de Preparación</h3>
+                <p class="role-info">World Youth Festival (WYF) | 2023 – Presente</p>
+                <ul>
+                    <li>Coordinación de la participación paraguaya en foros internacionales.</li>
+                    <li>Organización de eventos de juventud a nivel global.</li>
+                    <li>Representación de Paraguay en políticas internacionales de juventud.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Consultor y Diseñador de Programas (Rol Actualizado)</h3>
+                <p class="role-info">Organización sin fines de lucro | 2018 – Presente</p>
+                <ul>
+                    <li>Creación de programas educativos con más de 500 participantes.</li>
+                    <li>Diseño de 15+ programas de capacitación profesional.</li>
+                    <li>Alianzas con más de 10 instituciones nacionales e internacionales.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Intérprete Telefónico Bilingüe</h3>
+                <p class="role-info">IntGlobal LLC | Marzo 2023 – Septiembre 2023</p>
+                <ul>
+                    <li>Interpretación profesional español-inglés en operaciones.</li>
+                    <li>Trabajo remoto bajo estándares internacionales.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Consultor y Diseñador de Programas</h3>
+                <p class="role-info">Ministerio de la Juventud / BID | 2019 – Presente</p>
+                <ul>
+                    <li>Diseño de programas de liderazgo y formación profesional.</li>
+                    <li>Implementación de estándares internacionales de capacitación.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Asesor Independiente y Consultor</h3>
+                <p class="role-info">Diversas ONG y organismos internacionales | 2017 – Presente</p>
+                <ul>
+                    <li>Asesoramiento estratégico en cooperación internacional.</li>
+                    <li>Intérprete Inglés–Español en reuniones de alto nivel.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="constancia-laboral" class="section">
+            <h2>Constancia de Trabajo (IntGlobal LLC)</h2>
+            <p>Por medio de la presente, se certifica que el **Sr. Julio Isaias Solaeche Florentin**, de nacionalidad paraguaya y con Cédula de Identidad N.º **3.731.121**, ha estado vinculado a nuestra empresa, **IntGlobal LLC**, desde el **17 de marzo de 2023** hasta el **1 de septiembre de 2023**, desempeñándose en el cargo de **Intérprete Telefónico**.</p>
+            <p>En este puesto, realizó interpretaciones **bilingües (español-inglés)** en el área de Operaciones de la empresa, desempeñando sus funciones bajo la modalidad de **home office**.</p>
+            <p>Emitido a solicitud el 21 de febrero de 2025 por **Bethsabe Saldivar**.</p>
+        </section>
+
+        <section id="formacion" class="section">
+            <h2>Formación Académica</h2>
+            <div class="experience-item">
+                <h3>Licenciatura en Relaciones Internacionales</h3>
+                <p class="role-info">Universidad Americana, Paraguay | 2012 – 2016 (Graduado 2017)</p>
+            </div>
+        </section>
+
+        <section id="certificaciones" class="section">
+            <h2>Certificaciones Destacadas</h2>
+            <ul class="certifications-list">
+                <li>**Gestión de Proyectos de Desarrollo** (Banco Interamericano de Desarrollo - BID)</li>
+                <li>**Advanced English C1** (Platzi English Academy)</li>
+                <li>**Design Thinking** (Platzi)</li>
+                <li>**Supply Chain Management** (Platzi)</li>
+                <li>**International Journalism** (RT Academy)</li>
+                <li>**Asociaciones Público–Privadas (APP)** (UNIDA / BCG)</li>
+                <li>**How to Talk to the Public** (Dale Carnegie Training)</li>
+                <li>**Formación y Capacitación Laboral** (SINAFOCAL)</li>
+                <li>**New Ties for a New World** (RUDN University, Moscú)</li>
+                <li>**Curso de Claude AI** (Platzi)</li>
+                <li>**Curso de Business Model Canvas** (Platzi)</li>
+                <li>**Finanzas para Emprendedores** (Platzi)</li>
+                <li>**Marketing para Emprendedores y PYMES** (Platzi)</li>
+                <li>**Estrategias de Venta en Redes Sociales** (Platzi)</li>
+                <li>**Fidelización de Clientes** (Platzi)</li>
+                <li>**Motivación y Guía para Potenciar tu Emprendimiento** (Platzi)</li>
+                <li>**Innovación y Creación de Productos** (Platzi)</li>
+                <li>**Encontrar y Evaluar Ideas para Emprender** (Platzi)</li>
+            </ul>
+        </section>
+
+        <section id="participacion-internacional" class="section">
+            <h2>Participación Internacional</h2>
+            <ul class="participation-list">
+                <li>**World Youth Festival 2024** (Rusia, 2024 – Delegado oficial)</li>
+                <li>**Eurasia Global Forum** (Rusia, 2024 y 2025 – Participante internacional)</li>
+                <li>**19º Festival Mundial de la Juventud** (Rusia, 2017 – Representante de Paraguay)</li>
+                <li>**VII Young Americas Forum** (OEA / YABT (Perú, 2018) – Delegado joven)</li>
+                <li>**International Volunteer Camp** (Rusia, 2020 – Participante)</li>
+                <li>**Future Team Ambassador** (#WeAreTogether Online Marathon (2020))</li>
+            </ul>
+        </section>
+
+        <section id="habilidades" class="section">
+            <h2>Habilidades Clave</h2>
+            <ul class="skills-list">
+                <li>Gestión de Proyectos Internacionales</li>
+                <li>Planificación Estratégica</li>
+                <li>Liderazgo y Coordinación</li>
+                <li>Diseño de Programas Educativos</li>
+                <li>Consultoría Institucional</li>
+                <li>Comunicación Intercultural</li>
+                <li>Relaciones Internacionales</li>
+                <li>Cooperación Internacional</li>
+            </ul>
+        </section>
+
+        <section id="logros" class="section">
+            <h2>Logros Destacados</h2>
+            <ul class="achievements-list">
+                <li>Representante de Paraguay en más de 10 foros internacionales.</li>
+                <li>Creación de programas reconocidos por organismos multilaterales.</li>
+                <li>Coordinación de proyectos con impacto nacional e internacional.</li>
+            </ul>
+        </section>
+
+        <section id="galeria" class="section">
+            <h2>Galería Internacional</h2>
+            
+            <div class="gallery-category">
+                <h3>🌍 World Youth Festival 2024 - Rusia</h3>
+                <div class="image-grid">
+                    <div class="image-card">
+                        <a href="https://i.imgur.com/yXOtlLZ.jpg" target="_blank"><img src="https://i.imgur.com/yXOtlLZ.jpg" alt="Delegación Internacional"></a>
+                        <div class="image-card-info">
+                            <strong>Delegación Internacional</strong>
+                            <span>World Youth Festival 2024</span>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://i.imgur.com/eGeJKz2.jpg" target="_blank"><img src="https://i.imgur.com/eGeJKz2.jpg" alt="Representando a Paraguay"></a>
+                        <div class="image-card-info">
+                            <strong>Representando a Paraguay</strong>
+                            <span>Con la bandera nacional en WYF</span>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://i.imgur.com/qfAQ5St.jpg" target="_blank"><img src="https://i.imgur.com/qfAQ5St.jpg" alt="Cobertura Internacional"></a>
+                        <div class="image-card-info">
+                            <strong>Cobertura Internacional</strong>
+                            <span>Aparición en RT - Russia Today</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-category">
+                <h3>🎤 Eurasia Global Forum</h3>
+                <div class="image-grid">
+                    <div class="image-card">
+                        <a href="https://i.imgur.com/F13g2iu.jpg" target="_blank"><img src="https://i.imgur.com/F13g2iu.jpg" alt="Participante Activo"></a>
+                        <div class="image-card-info">
+                            <strong>Participante Activo</strong>
+                            <span>Eurasia Global Forum</span>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://i.imgur.com/7gAYZos.jpg" target="_blank"><img src="https://i.imgur.com/7gAYZos.jpg" alt="Orador Internacional"></a>
+                        <div class="image-card-info">
+                            <strong>Orador Internacional</strong>
+                            <span>Presentación en Eurasia Forum</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-category">
+                <h3>🎓 Programas Educativos & Capacitaciones</h3>
+                <div class="image-grid">
+                    <div class="image-card">
+                        <a href="https://i.imgur.com/wVqsEXq.jpg" target="_blank"><img src="https://i.imgur.com/wVqsEXq.jpg" alt="Formación de Mandos Medios"></a>
+                        <div class="image-card-info">
+                            <strong>Formación de Mandos Medios</strong>
+                            <span>30+ participantes graduados</span>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://i.imgur.com/YEbS6gR.jpg" target="_blank"><img src="https://i.imgur.com/YEbS6gR.jpg" alt="Ceremonia de Graduación"></a>
+                        <div class="image-card-info">
+                            <strong>Ceremonia de Graduación</strong>
+                            <span>Entrega de certificados</span>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://i.imgur.com/iG0Wf9X.jpg" target="_blank"><img src="https://i.imgur.com/iG0Wf9X.jpg" alt="Facilitador Principal"></a>
+                        <div class="image-card-info">
+                            <strong>Facilitador Principal</strong>
+                            <span>Liderando capacitaciones</span>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://i.imgur.com/GVXvdtR.jpg" target="_blank"><img src="https://i.imgur.com/GVXvdtR.jpg" alt="Bomberos Voluntarios"></a>
+                        <div class="image-card-info">
+                            <strong>Bomberos Voluntarios</strong>
+                            <span>Capacitación sectorial</span>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://i.imgur.com/5v8gsIc.jpg" target="_blank"><img src="https://i.imgur.com/5v8gsIc.jpg" alt="Gobiernos Locales"></a>
+                        <div class="image-card-info">
+                            <strong>Gobiernos Locales</strong>
+                            <span>Municipalidad La Pastora</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-category">
+                <h3>🤝 Conferencias & Paneles</h3>
+                <div class="image-grid">
+                    <div class="image-card">
+                        <a href="https://i.imgur.com/rk71z6Y.jpg" target="_blank"><img src="https://i.imgur.com/rk71z6Y.jpg" alt="New Ties for a New World"></a>
+                        <div class="image-card-info">
+                            <strong>New Ties for a New World</strong>
+                            <span>RUDN University, Moscú 2024</span>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://i.imgur.com/7jzLPzs.jpg" target="_blank"><img src="https://i.imgur.com/7jzLPzs.jpg" alt="Panelista"></a>
+                        <div class="image-card-info">
+                            <strong>Panelista</strong>
+                            <span>Unión Industrial Paraguaya</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p style="text-align: center; padding: 20px; font-size: 0.8em; color: #64748b;">© 2025 Julio Isaías Solaeche Florentín. Referencias disponibles a solicitud.</p>
+    </footer>
+
+</body>
+</html>
